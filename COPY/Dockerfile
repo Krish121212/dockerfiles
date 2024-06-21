@@ -4,4 +4,4 @@ RUN rm -rf /usr/share/nginx/html/index.html
 COPY index.html /usr/share/nginx/html/index.html
 CMD [ "nginx","-g","daemon off;" ]
 
-# copying a file from local to docker
+# copying a file from local workspace to docker image

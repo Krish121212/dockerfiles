@@ -1,8 +1,9 @@
 ARG version
 FROM almalinux:${version:-8}
-ARG Name
-ARG Tool
-RUN echo "This is ${Name}, practicing ${Tool}"
+ARG Name=Krishna
+ARG Tool=Docker
+ENV instrection=arg
+RUN echo "This is ${Name}, practicing ${Tool}, and it's topic ${instrection}"
 CMD [ "sleep","100" ]
 
 # ARG can be first instruction in only one case - before from to get version

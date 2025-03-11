@@ -6,7 +6,9 @@ WORKDIR /app
 COPY pom.xml .
 COPY src ./src
 # Build the application, Runs Maven to clean, compile, and package the application
-RUN mvn clean package -DskipTests  
+RUN mvn clean package -DskipTests 
+# gradle 
+RUN ./gradlew clean build -x test
 
 # Stage 2: Runtime Stage
 FROM openjdk:17-jdk-slim
